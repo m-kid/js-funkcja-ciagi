@@ -2,13 +2,21 @@ var text = "Papugi koszą trawę, unosząc się nad ziemią 15 centymetrów, na 
 
 console.log(text);
 
-var addText = 'Zielone słonie';
-var upperAddText = addText.toUpperCase();
+var addedText = prompt('Jakie jest Twoje ulubione zwierzę?');
+var upperAddedText = addedText.toUpperCase();
 
-console.log(upperAddText)
+console.log(upperAddedText)
 
-var afterText = text.replace('Papugi', upperAddText);
+var divideText = text.split (" ");
 
-console.log(afterText);
-console.log(afterText.length);
-console.log(afterText.substr(0, 45));
+var firstWord = divideText[0];
+console.log(firstWord);
+
+
+var textTransformed = text.replace(firstWord, upperAddedText);
+var textLength = textTransformed.length;
+
+
+console.log(textTransformed);
+console.log(textTransformed.length);
+console.log(textTransformed.substr(0, textLength / 2));
